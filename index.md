@@ -98,9 +98,9 @@
 - **Definition**: The difference in electrode potentials between the cathode and anode.
 
 - **Formula**:
-  \[
+
   $ \text{E}_{\text{cell}} = (\text{E}_{\text{cathode}} - \text{E}_{\text{anode}}) - |\eta_{\text{anode}} - \eta_{\text{cathode}}| - iR_{\text{cell}} $
-  \]
+
   Where:
   - \( $\eta$ \) is the overpotential.
   - \( $iR_{\text{cell}}$ \) is the internal resistance drop.
