@@ -12,7 +12,7 @@
 
 ### Primary Batteries
 
-- **Definition**: Non-rechargeable batteries that produce electricity from chemicals sealed within them during manufacture. Once depleted, they cannot be efficiently recharged and must be discarded.
+- **Definition**: Non-rechargeable batteries that produce electricity from chemicals sealed within them during manufacture. Once depleted(reaction reached equilibrium), they cannot be efficiently recharged and must be discarded.
 
 - **Characteristics**:
   - Known as "throw-away" or irreversible batteries.
@@ -99,20 +99,21 @@
 
 - **Formula**:
   \[
-  \text{E}_{\text{cell}} = (\text{E}_{\text{cathode}} - \text{E}_{\text{anode}}) - |\eta_{\text{anode}} - \eta_{\text{cathode}}| - iR_{\text{cell}}
+  $\text{E}_{\text{cell}} = (\text{E}_{\text{cathode}} - \text{E}_{\text{anode}}) - |\eta_{\text{anode}} - \eta_{\text{cathode}}| - iR_{\text{cell}}$
   \]
   Where:
-  - \( \eta \) is the overpotential.
-  - \( iR_{\text{cell}} \) is the internal resistance drop.
+  - \( $\eta$ \) is the overpotential.
+  - \( $iR_{\text{cell}}$ \) is the internal resistance drop.
 
 - **Optimization**:
   - Maximize the difference in electrode potentials.
-  - Minimize overpotentials by ensuring fast electrode reactions.
-  - Reduce internal resistance through battery design.
+  - Minimize overpotentials by ensuring fast electrode reactions.The electrode systems should be such that the active mass at the positive electrode 
+  depletes readily and that at the negative electrode increases easily.
+  - Reduce internal resistance through battery design. This can be achieved by keeping the electrodes close to each other and by using an electrolyte of high conductivity.
 
 ### 2. Current
 
-- **Definition**: The rate at which electrons flow through the external circuit, measured in amperes (A).
+- **Definition**: The rate at which electrons flow during discharge, measured in amperes (A).
 
 - **Importance**: Determines the battery's ability to deliver power; high conductivity electrolytes support higher currents.
 
@@ -120,9 +121,10 @@
 
 - **Definition**: The total charge a battery can deliver at the rated voltage, measured in ampere-hours (Ah).
 
+- This depends on the size of the battery and is determined by the Faraday relation, 
 - **Calculation**:
   \[
-  C = \frac{m \times n \times F}{M}
+  $C = \frac{m \times n \times F}{M}$
   \]
   Where:
   - \( m \) is the mass of the active material.
@@ -131,28 +133,43 @@
   - \( M \) is the molar mass of the active material.
 
 - **Factors Affecting Capacity**:
-  - Amount of active material.
+  - The amount of active materials consumed during discharge
   - Discharge conditions (current, temperature, etc.).
+  - It is measured by 
+  finding the time ‘t’ taken for the battery to reach a minimum voltage, $ E_{cell}^{min} $ for a fixed 
+  current discharge (i amperes). (The cell is said to be dead at minimum voltage). A plot of 
+  time against voltage at a fixed current discharge is shown in Fig. The length of the 
+  flat portion of the curve is a measure of the capacity of the battery, the longer the flat 
+  portion better the capacity.
 
 ### 4. Energy Density
 
-- **Definition**: The amount of energy stored per unit mass or volume of the battery, measured in watt-hours per kilogram (Wh/kg) or watt-hours per liter (Wh/L).
+- **Definition**: The ratio of the energy available from a battery to its mass (or volume) , measured in watt-hours per kilogram (Wh/kg) or watt-hours per liter (Wh/L).
 
 - **Importance**: Higher energy density means the battery can store more energy in a smaller or lighter package.
 
+- Energy density is determined by measuring the capacity and recording the average 
+voltage (voltage averaged during the discharge) and the total mass (or volume) of the 
+battery
+
+- A battery should have continuous energy density above a certain value or a very 
+high energy density for a short period.
+
 ### 5. Power Density
 
-- **Definition**: The rate at which energy can be delivered per unit mass or volume, measured in watts per kilogram (W/kg) or watts per liter (W/L).
+- **Definition**: The ratio of the power available from a battery to its mass (W/kg) or 
+volume (W/L).
 
 - **Importance**: Determines the battery's ability to deliver high currents and is critical for applications requiring bursts of power.
 
+- A battery should have continuous power density above a certain value or a high value for a short period
 ### 6. Energy Efficiency
 
 - **Definition**: The ratio of energy output during discharge to energy input during charging.
 
 - **Formula**:
   \[
-  \text{Energy Efficiency (\%)} = \left( \frac{\text{Energy Discharged}}{\text{Energy Charged}} \right) \times 100
+  $\text{Energy Efficiency (\%)} = \left( \frac{\text{Energy Discharged}}{\text{Energy required for Charging}} \right) \times 100$
   \]
 
 - **Factors Affecting Efficiency**:
@@ -162,18 +179,23 @@
 
 ### 7. Cycle Life
 
-- **Definition**: The number of complete charge-discharge cycles a battery can undergo before its capacity falls below a specific percentage of its original capacity.
-
-- **Importance**: Indicates battery longevity; affected by factors like electrode degradation, corrosion, and morphological changes.
+- **Definition**: The number of complete charge-discharge cycles a battery can undergo before its capacity falls below a specific percentage of its original capacity(failure occurs).
+- It is necessary that during charging the active material is regenerated in a suitable state for 
+discharge. 
+- **Importance**: Indicates battery longevity; affected by factors like electrode degradation(shredding of active material), corrosion at contact points,short circuit, and morphological changes.
 
 ### 8. Shelf Life
 
-- **Definition**: The duration a battery can be stored without significant loss of performance.
+- **Definition**: The duration a battery can be stored without significant loss of performance under specified conditions.
 
 - **Factors Influencing Shelf Life**:
   - Self-discharge rates.
   - Chemical stability of materials.
-  - Storage conditions (temperature, humidity).
+  - Storage conditions (temperature, humidity,vibration and shock).
+
+- Self-discharge 
+occurs when there is a reaction between the anode and the cathode active materials or 
+corrosion of current collectors.
 
 ## Emerging Battery Technologies
 
@@ -237,11 +259,13 @@
 
 - **Applications**: Stationary energy storage where cost is more critical than energy density.
 
-## Lead-Acid Battery
+## Lead-Acid Battery(Lead Accumulator or Car Battery or the acid battery)
 
 ### Construction
 
 - **Electrodes**:
+  - Lead Grids are used to maximize the surface 
+  area.
   - **Anode**: Lead (Pb) grid filled with spongy lead.
   - **Cathode**: Lead dioxide (PbO₂) packed in a lead grid.
 
@@ -249,69 +273,74 @@
 
 - **Separator**: Insulators like wood, rubber, or glass fiber prevent contact between electrodes.
 
-- **Container**: Encased in plastic or hard rubber.
+- **Container**: Encased in plastic or hard vulcanized rubber.
 
 ### Discharging Reactions
 
 - **At Anode**:
-  \[
-  \text{Pb (s)} + \text{SO}_4^{2-} \rightarrow \text{PbSO}_4 (s) + 2 e^-
+  \[$
+  \text{Pb (s)} + \text{SO}_4^{2-} \rightarrow \text{PbSO}_4 (s) + 2 e^-$
   \]
 
 - **At Cathode**:
-  \[
-  \text{PbO}_2 (s) + 4 \text{H}^+ + \text{SO}_4^{2-} + 2 e^- \rightarrow \text{PbSO}_4 (s) + 2 \text{H}_2\text{O}
+  \[$
+  \text{PbO}_2 (s) + 4 \text{H}^+(aq) + \text{SO}_4^{2-} + 2 e^- \rightarrow 2\text{PbSO}_4 (s) + 2 \text{H}_2\text{O}$
   \]
 
 - **Overall Reaction**:
-  \[
-  \text{Pb} (s) + \text{PbO}_2 (s) + 2 \text{H}_2\text{SO}_4 (aq) \rightarrow 2 \text{PbSO}_4 (s) + 2 \text{H}_2\text{O} (l)
+  \[$
+  \text{Pb} (s) + \text{PbO}_2 (s) + 4H^+ (aq) + 2SO_4^{2-}(aq) \rightarrow 2 \text{PbSO}_4 (s) + 2 \text{H}_2\text{O} (l)$
   \]
 
-- **Explanation**: During discharge, both electrodes convert to lead sulfate (PbSO₄), and sulfuric acid is consumed, leading to water formation and a decrease in acid concentration.
+- **Explanation**: **Read from teacher's notes**
 
 ### Charging Reactions
 
 - **At Anode**:
-  \[
-  \text{PbSO}_4 (s) + 2 e^- \rightarrow \text{Pb} (s) + \text{SO}_4^{2-}
+  \[$
+  \text{PbSO}_4 (s) + 2 e^- \rightarrow \text{Pb} (s) + \text{SO}_4^{2-} (aq)$
   \]
 
 - **At Cathode**:
-  \[
-  \text{PbSO}_4 (s) + 2 \text{H}_2\text{O} \rightarrow \text{PbO}_2 (s) + \text{SO}_4^{2-} + 4 \text{H}^+ + 2 e^-
+  \[$
+  \text{PbSO}_4 (s) + 2 \text{H}_2\text{O} \rightarrow \text{PbO}_2 (s) + \text{SO}_4^{2-} + 4 \text{H}^+ + 2 e^-$
   \]
 
 - **Net Reaction**:
-  \[
-  2 \text{PbSO}_4 (s) + 2 \text{H}_2\text{O} \rightarrow \text{Pb} (s) + \text{PbO}_2 (s) + 2 \text{H}_2\text{SO}_4 (aq)
+  \[$
+  2 \text{PbSO}_4 (s) + 2 \text{H}_2\text{O}(l) \rightarrow \text{Pb} (s) + \text{PbO}_2 (s) + 2 \text{H}_2\text{SO}_4$
   \]
 
-- **Explanation**: Charging reverses the discharge reactions, regenerating the original lead and lead dioxide electrodes and restoring the sulfuric acid concentration.
+- **Explanation**: **Read from teacher's notes**
 
 ### Overcharging
 
-- **Issue**: Excessive charging can lead to the electrolysis of water, producing hydrogen and oxygen gases, which can cause pressure build-up and explosion risk.
+- **Issue**: Excessive charging can lead to the electrolysis of water\[$2H_2O(l)+ \text{electrical energy} \rightarrow 2H_2(g) + O_2(g)$\], producing hydrogen at cathode and oxygen at anode , which can cause:
+  - Excessive charging may reduce the acid level and may damage the 
+  exposed electrode grids 
+  - pressure build-up and explosion risk.
 
 - **Prevention**:
-  - Use of lead-calcium alloys to inhibit water electrolysis.
-  - Incorporation of catalysts to recombine hydrogen and oxygen into water.
+  - Use of lead-calcium(0.1%) as the anode alloys to inhibit water electrolysis.
+  - Incorporation of catalysts to recombine hydrogen and oxygen into water (e.g. a mixture of 98% ceria 
+  (cerium oxide) & 2% platinum).
   - Sealed, maintenance-free designs prevent electrolyte leakage and gas release.
 
 ### Applications
 
 - **Automotive**: Starting, lighting, and ignition (SLI) in vehicles.
 
-- **Industrial**: Power for electric vehicles like forklifts, submarines, and backup power systems.
+- **Industrial**: Power for electric vehicles like forklifts, submarines, and backup power systems for telecom and medical systems.
 
 - **Consumer**: Emergency lighting, security systems, uninterruptible power supplies (UPS) for computers.
 
 ### Advantages
 
 - High voltage efficiency (~80%).
-- Long service life with numerous recharge cycles (300–2000 cycles).
+- Long service life with numerous recharge cycles (300–1500 cycles).
+And sealed batteries can go upto 2000 cycles
 - Low internal self-discharge.
-- Ability to provide high current outputs.
+- Ability to provide high current outputs about 10A.
 - Relatively low cost.
 
 ### Disadvantages
